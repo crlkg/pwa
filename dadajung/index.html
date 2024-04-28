@@ -26,7 +26,7 @@
     <script>
         // if ('serviceWorker' in navigator) {
         //     navigator.serviceWorker
-        //     .register('../sw.js')
+        //     .register('./service-worker.js')
         //     .then(function () {
         //         console.log('서비스 워커가 등록됨!');
         //     })
@@ -34,7 +34,7 @@
 
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker
-            .register('/sw.js')
+            .register('sw.js')
             .then((pSW) => console.log('서비스 워커가 등록됨!', pSW))
             .catch((pErr) => console.log('서비스 워커가 등록이 안됨!', pErr))
         }
