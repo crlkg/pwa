@@ -2,11 +2,42 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- PWA 매너페스트 파일 연결, 상태바 테마색상 변경 -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#FF99CC">
+    <!-- 모바일 기기 뷰포트, 브라우저 주소줄 파비콘 설정-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" size="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" size="32x32" href="../images/favicon-32x32.png">
+    <title>dadajung test</title>
+    <style>
+        html, body {height: 100%; background-color: lavenderblush; color: blueviolet;}
+        .container {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+    </style>
 </head>
 <body>
-    <h1>dadajung test</h1>
+    <div class="container">
+        <h1>dadajung test</h1>
+        <img src="../images/apple-touch-icon.png" alt="">
+        <p>by js</p>
+    </div>
+
+    <script>
+        // if ('serviceWorker' in navigator) {
+        //     navigator.serviceWorker
+        //     .register('../sw.js')
+        //     .then(function () {
+        //         console.log('서비스 워커가 등록됨!');
+        //     })
+        // }
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+            .register('/sw.js')
+            .then((pSW) => console.log('서비스 워커가 등록됨!', pSW))
+            .catch((pErr) => console.log('서비스 워커가 등록이 안됨!', pErr))
+        }
+    </script>
 </body>
 </html>
