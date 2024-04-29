@@ -18,15 +18,15 @@
 </body>
 </html>
 <script>
-    if ('seviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                // 등록 성공
-                console.log('ServiceWorker registration succeessful with scope: ', registration.scope);
-            }, function(err) {
-                // 등록 실패
-                console.log('ServiceWorker registration faile: ', err);
-            });
-        });
-    }
+    // if ('seviceWorker' in navigator) {
+    //     window.addEventListener('load', function() {
+    //         navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    //             // 등록 성공
+    //             console.log('ServiceWorker registration succeessful with scope: ', registration.scope);
+    //         }, function(err) {
+    //             // 등록 실패
+    //             console.log('ServiceWorker registration faile: ', err);
+    //         });
+    //     });
+    // }
 </script>
