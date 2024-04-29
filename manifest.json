@@ -4,7 +4,7 @@
     "description": "A simple progressive web application",
     "scope": ".",
     "start_url": "./",
-    "display": "minimal-ui",
+    "display": "standalone",
     "orientation": "portrait",
     "background_color": "#ffffff",
     "icons": [
